@@ -1,0 +1,29 @@
+{
+  "name": "playwright_cucumber_typescript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js --import src/test/steps/*.ts --import src/test/pom/*.ts"
+  },
+  "keywords": [
+    "cucumber",
+    "cucumber - TS",
+    "playwright-cucumber"
+  ],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.0.1",
+    "@playwright/test": "^1.48.0",
+    "@types/node": "^22.7.5",
+    "prettier": "^3.3.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3",
+    "test": "cucumber-js --import-module ts-node/register"
+  },
+  "dependencies": {
+    "@cucumber/pretty-formatter": "^1.0.1",
+    "playwright": "^1.48.0"
+  }
+}
