@@ -11,11 +11,12 @@ Given("User opens the login page", async function () {
   browser = await chromium.launch({ headless: false });
   page = await browser.newPage();
   loginPage = new LoginPage(page); // Inicjalizujemy instancję LoginPage z obiektem 'page'
-  await page.goto("https://example.com/login");
+  await page.goto(loginPage.homePath);
 });
 
 Given("User clicks on the {string} button", async function (login_button: string) {
   await page.locator(loginPage.loginButton).click(); // Odwołujemy się do instancji klasy
+  await page.waitForURL(loginPage.loginPath);
 });
 
 After(async function () {

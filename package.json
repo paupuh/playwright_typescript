@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js --import src/test/steps/*.ts --import src/test/pom/*.ts"
+    "test": "tsc && cucumber-js --import dist/test/steps/*.js --import dist/test/pom/*.js"
   },
   "keywords": [
     "cucumber",

@@ -1,1 +1,58 @@
-[]
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "user-authentication-tests;",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "User opens the login page",
+            "match": {
+              "location": "dist/test/steps/loginSteps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2350034957
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "User clicks on the \"Login\" button",
+            "match": {
+              "location": "dist/test/steps/loginSteps.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 95506249
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 87308207
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "user-authentication-tests",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "User Authentication tests",
+    "tags": [],
+    "uri": "src/test/features/login.feature"
+  }
+]
