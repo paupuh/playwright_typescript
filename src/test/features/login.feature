@@ -1,5 +1,7 @@
 Feature: User Authentication tests
 
-  Scenario: 
+  @login
+  Scenario:
     Given User opens the login page
     When User clicks on the "Login" button
+    Then User should be redirected to the login page

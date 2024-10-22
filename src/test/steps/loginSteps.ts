@@ -1,5 +1,4 @@
 import { Given, When, Then, After } from "@cucumber/cucumber";
-import { expect } from "@playwright/test";
 import { chromium, Browser, Page } from "playwright";
 import { LoginPage } from "../pom/loginPage";
 import { setDefaultTimeout } from "@cucumber/cucumber";
@@ -14,15 +13,16 @@ Given("User opens the login page", async function () {
   browser = await chromium.launch({ headless: false });
   page = await browser.newPage();
   loginPage = new LoginPage(page); // Inicjalizujemy instancję LoginPage z obiektem 'page'
-  await page.goto(loginPage.homePath);
+  await loginPage.openHomePage(); // Otwieramy stronę główną
 });
 
-When(
-  "User clicks on the {string} button",
-  async function (login_button: string) {
-    await loginPage.loginAnddirection();
-  },
-);
+When("User clicks on the {string} button", async function (login_button: string) {
+  await loginPage.clickLoginBtn(); // Klikamy przycisk logowania
+});
+
+Then("User should be redirected to the login page", async function () {
+  await loginPage.waitForLoginPage(); // Czekamy na przekierowanie do strony logowania
+});
 
 After(async function () {
   if (browser) {

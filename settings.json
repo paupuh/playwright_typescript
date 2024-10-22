@@ -1,6 +1,6 @@
 {
   "cucumberautocomplete.steps": [
-    "dist/test/steps/*.js" // Ścieżka do plików z krokami (może być inna w zależności od projektu)
+    "src/test/steps/*.js" // Ścieżka do plików z krokami (może być inna w zależności od projektu)
   ],
   "cucumberautocomplete.syncfeatures": "src/test/features/*feature", // Ścieżka do plików .feature
   "cucumberautocomplete.strictGherkinCompletion": true, // Włącza ścisłe dopasowanie Gherkin

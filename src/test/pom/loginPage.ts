@@ -1,20 +1,27 @@
-import { Page } from "@playwright/test";
+import { Page } from "playwright";
 
 export class LoginPage {
-  private page: Page;
+  page: Page;
+  homePath: string;
+  loginButton: string;
+  loginPath: string;
 
   constructor(page: Page) {
     this.page = page;
+    this.homePath = "https://bookcart.azurewebsites.net"; // URL do strony głównej
+    this.loginButton = "button.mat-mdc-tooltip-trigger span.mdc-button__label";
+    this.loginPath = "https://bookcart.azurewebsites.net/login";
   }
 
-  //locators
-  public homePath: string = "https://bookcart.azurewebsites.net/";
-  public loginButton = 'button[mattooltip="Login"]';
-  public loginPath = this.homePath + "login";
-  //methods
+  public async openHomePage(): Promise<void> {
+    await this.page.goto(this.homePath);
+  }
 
-  public async loginAnddirection(): Promise<void> {
+  public async clickLoginBtn(): Promise<void> {
     await this.page.locator(this.loginButton).click();
-    await this.page.waitForURL(this.loginPath);
+  }
+
+  public async waitForLoginPage(): Promise<void> {
+    await this.page.waitForURL(this.loginPath); // Oczekuje na URL po zalogowaniu
   }
 }

@@ -6,33 +6,46 @@
         "description": "",
         "id": "user-authentication-tests;",
         "keyword": "Scenario",
-        "line": 3,
+        "line": 4,
         "name": "",
         "steps": [
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 4,
+            "line": 5,
             "name": "User opens the login page",
             "match": {
-              "location": "dist\\test\\steps\\loginSteps.js:20"
+              "location": "dist/test/steps/loginSteps.js:20"
             },
             "result": {
               "status": "passed",
-              "duration": 3620535599
+              "duration": 2794035917
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 5,
+            "line": 6,
             "name": "User clicks on the \"Login\" button",
             "match": {
-              "location": "dist\\test\\steps\\loginSteps.js:28"
+              "location": "dist/test/steps/loginSteps.js:28"
             },
             "result": {
               "status": "passed",
-              "duration": 94026200
+              "duration": 129101916
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "User should be redirected to the login page",
+            "match": {
+              "location": "dist/test/steps/loginSteps.js:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1808874
             }
           },
           {
@@ -40,11 +53,16 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 222939699
+              "duration": 86388167
             }
           }
         ],
-        "tags": [],
+        "tags": [
+          {
+            "name": "@login",
+            "line": 3
+          }
+        ],
         "type": "scenario"
       }
     ],
@@ -53,6 +71,6 @@
     "keyword": "Feature",
     "name": "User Authentication tests",
     "tags": [],
-    "uri": "src\\test\\features\\login.feature"
+    "uri": "src/test/features/login.feature"
   }
 ]
