@@ -15,24 +15,24 @@
             "line": 4,
             "name": "User opens the login page",
             "match": {
-              "location": "dist/test/steps/loginSteps.js:18"
+              "location": "dist\\test\\steps\\loginSteps.js:20"
             },
             "result": {
               "status": "passed",
-              "duration": 2350034957
+              "duration": 3620535599
             }
           },
           {
             "arguments": [],
-            "keyword": "Given ",
+            "keyword": "When ",
             "line": 5,
             "name": "User clicks on the \"Login\" button",
             "match": {
-              "location": "dist/test/steps/loginSteps.js:26"
+              "location": "dist\\test\\steps\\loginSteps.js:28"
             },
             "result": {
               "status": "passed",
-              "duration": 95506249
+              "duration": 94026200
             }
           },
           {
@@ -40,7 +40,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 87308207
+              "duration": 222939699
             }
           }
         ],
@@ -53,6 +53,6 @@
     "keyword": "Feature",
     "name": "User Authentication tests",
     "tags": [],
-    "uri": "src/test/features/login.feature"
+    "uri": "src\\test\\features\\login.feature"
   }
 ]

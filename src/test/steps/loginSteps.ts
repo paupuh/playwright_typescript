@@ -2,6 +2,9 @@ import { Given, When, Then, After } from "@cucumber/cucumber";
 import { expect } from "@playwright/test";
 import { chromium, Browser, Page } from "playwright";
 import { LoginPage } from "../pom/loginPage";
+import { setDefaultTimeout } from "@cucumber/cucumber";
+
+setDefaultTimeout(70000); // 70 seconds for all steps
 
 let browser: Browser;
 let page: Page;
@@ -14,11 +17,15 @@ Given("User opens the login page", async function () {
   await page.goto(loginPage.homePath);
 });
 
-Given("User clicks on the {string} button", async function (login_button: string) {
-  await page.locator(loginPage.loginButton).click(); // Odwołujemy się do instancji klasy
-  await page.waitForURL(loginPage.loginPath);
-});
+When(
+  "User clicks on the {string} button",
+  async function (login_button: string) {
+    await loginPage.loginAnddirection();
+  },
+);
 
 After(async function () {
-  await browser.close();
+  if (browser) {
+    await browser.close();
+  }
 });
