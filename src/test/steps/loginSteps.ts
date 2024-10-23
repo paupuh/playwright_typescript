@@ -24,6 +24,10 @@ Then("User should be redirected to the login page", async function () {
   await loginPage.waitForLoginPage(); // Czekamy na przekierowanie do strony logowania
 });
 
+Given("User clicks on the {string} button", async function (register_button: string) {
+await loginPage.clickLoginBtn();
+
+}
 After(async function () {
   if (browser) {
     await browser.close();

@@ -15,11 +15,11 @@
             "line": 5,
             "name": "User opens the login page",
             "match": {
-              "location": "dist/test/steps/loginSteps.js:20"
+              "location": "dist\\test\\steps\\loginSteps.js:20"
             },
             "result": {
               "status": "passed",
-              "duration": 2352816041
+              "duration": 4232835399
             }
           },
           {
@@ -28,11 +28,11 @@
             "line": 6,
             "name": "User clicks on the \"Login\" button",
             "match": {
-              "location": "dist/test/steps/loginSteps.js:28"
+              "location": "dist\\test\\steps\\loginSteps.js:28"
             },
             "result": {
               "status": "passed",
-              "duration": 94622209
+              "duration": 106974299
             }
           },
           {
@@ -41,11 +41,11 @@
             "line": 7,
             "name": "User should be redirected to the login page",
             "match": {
-              "location": "dist/test/steps/loginSteps.js:33"
+              "location": "dist\\test\\steps\\loginSteps.js:33"
             },
             "result": {
               "status": "passed",
-              "duration": 1774708
+              "duration": 2900900
             }
           },
           {
@@ -53,7 +53,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 83107750
+              "duration": 282156799
             }
           }
         ],
@@ -71,6 +71,6 @@
     "keyword": "Feature",
     "name": "User Authentication tests",
     "tags": [],
-    "uri": "src/test/features/login.feature"
+    "uri": "src\\test\\features\\login.feature"
   }
 ]

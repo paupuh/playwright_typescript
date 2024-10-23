@@ -26,4 +26,9 @@ export class LoginPage {
   public async waitForLoginPage(): Promise<void> {
     await this.page.waitForURL(this.loginPath); // Oczekuje na URL po zalogowaniu
   }
+
+  public async clickRegisterBtn(): Promise<void> {
+    await this.page.locator(this.registerBtn).click();
+    
+  }
 }
