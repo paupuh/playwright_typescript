@@ -16,18 +16,25 @@ Given("User opens the login page", async function () {
   await loginPage.openHomePage(); // Otwieramy stronę główną
 });
 
-When("User clicks on the {string} button", async function (login_button: string) {
-  await loginPage.clickLoginBtn(); // Klikamy przycisk logowania
-});
+When(
+  "User clicks on the {string} button",
+  async function (login_button: string) {
+    await loginPage.clickLoginBtn(); // Klikamy przycisk logowania
+  }
+);
 
 Then("User should be redirected to the login page", async function () {
   await loginPage.waitForLoginPage(); // Czekamy na przekierowanie do strony logowania
 });
 
-Given("User clicks on the {string} button", async function (register_button: string) {
-await loginPage.clickLoginBtn();
+Given("User goes to the registration page", async function () {
+  await loginPage.clickLoginBtn();
+});
 
-}
+Given("User fills in {string} field with correct details", async function (fieldLocator: string, fieldValue: string) {
+  await loginPage.inputValue(loginPage.nameField, loginPage.firstName);
+});
+
 After(async function () {
   if (browser) {
     await browser.close();

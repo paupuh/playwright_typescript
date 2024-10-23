@@ -19,7 +19,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 4232835399
+              "duration": 6085001099
             }
           },
           {
@@ -32,7 +32,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 106974299
+              "duration": 103260700
             }
           },
           {
@@ -45,21 +45,49 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2900900
+              "duration": 2460500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "User goes to the registration page",
+            "match": {
+              "location": "dist\\test\\steps\\loginSteps.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 54330399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "User fills in \"First name\" field with correct details",
+            "match": {
+              "location": "dist\\test\\steps\\loginSteps.js:43"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 994999,
+              "error_message": "Error: function uses multiple asynchronous interfaces: callback and promise\nto use the callback interface: do not return a promise\nto use the promise interface: remove the last argument to the function\n    at Object.run (C:\\Users\\puhlmpau\\GitHub\\paupuhprojects\\playwright_typescript_cucumber\\node_modules\\@cucumber\\cucumber\\src\\user_code_runner.ts:50:16)\n    at C:\\Users\\puhlmpau\\GitHub\\paupuhprojects\\playwright_typescript_cucumber\\node_modules\\@cucumber\\cucumber\\src\\runtime\\step_runner.ts:52:24\n    at AsyncLocalStorage.run (node:async_hooks:346:14)\n    at runInTestCaseScope (C:\\Users\\puhlmpau\\GitHub\\paupuhprojects\\playwright_typescript_cucumber\\node_modules\\@cucumber\\cucumber\\src\\runtime\\scope\\test_case_scope.ts:15:24)\n    at Object.run (C:\\Users\\puhlmpau\\GitHub\\paupuhprojects\\playwright_typescript_cucumber\\node_modules\\@cucumber\\cucumber\\src\\runtime\\step_runner.ts:51:44)\n    at async TestCaseRunner.invokeStep (C:\\Users\\puhlmpau\\GitHub\\paupuhprojects\\playwright_typescript_cucumber\\node_modules\\@cucumber\\cucumber\\src\\runtime\\test_case_runner.ts:140:12)\n    at async TestCaseRunner.runStep (C:\\Users\\puhlmpau\\GitHub\\paupuhprojects\\playwright_typescript_cucumber\\node_modules\\@cucumber\\cucumber\\src\\runtime\\test_case_runner.ts:340:20)\n    at async C:\\Users\\puhlmpau\\GitHub\\paupuhprojects\\playwright_typescript_cucumber\\node_modules\\@cucumber\\cucumber\\src\\runtime\\test_case_runner.ts:246:34\n    at async TestCaseRunner.aroundTestStep (C:\\Users\\puhlmpau\\GitHub\\paupuhprojects\\playwright_typescript_cucumber\\node_modules\\@cucumber\\cucumber\\src\\runtime\\test_case_runner.ts:173:28)\n    at async TestCaseRunner.runAttempt (C:\\Users\\puhlmpau\\GitHub\\paupuhprojects\\playwright_typescript_cucumber\\node_modules\\@cucumber\\cucumber\\src\\runtime\\test_case_runner.ts:224:7)"
             }
           },
           {
             "keyword": "After",
             "hidden": true,
             "result": {
-              "status": "passed",
-              "duration": 282156799
+              "status": "failed",
+              "duration": 11655200,
+              "error_message": "locator.click: Target page, context or browser has been closed\nCall log:\n  \u001b[2m- waiting for locator('ng-tns-c1534922977-1mat-mdc-form-field-flex')\u001b[22m\n\n    at LoginPage.<anonymous> (C:\\Users\\puhlmpau\\GitHub\\paupuhprojects\\playwright_typescript_cucumber\\dist\\test\\pom\\loginPage.js:54:51)\n    at C:\\Users\\puhlmpau\\GitHub\\paupuhprojects\\playwright_typescript_cucumber\\dist\\test\\pom\\loginPage.js:8:71\n    at __awaiter (C:\\Users\\puhlmpau\\GitHub\\paupuhprojects\\playwright_typescript_cucumber\\dist\\test\\pom\\loginPage.js:4:12)\n    at LoginPage.inputValue (C:\\Users\\puhlmpau\\GitHub\\paupuhprojects\\playwright_typescript_cucumber\\dist\\test\\pom\\loginPage.js:53:16)\n    at World.<anonymous> (C:\\Users\\puhlmpau\\GitHub\\paupuhprojects\\playwright_typescript_cucumber\\dist\\test\\steps\\loginSteps.js:45:25)\n    at C:\\Users\\puhlmpau\\GitHub\\paupuhprojects\\playwright_typescript_cucumber\\dist\\test\\steps\\loginSteps.js:8:71\n    at __awaiter (C:\\Users\\puhlmpau\\GitHub\\paupuhprojects\\playwright_typescript_cucumber\\dist\\test\\steps\\loginSteps.js:4:12)\n    at World.<anonymous> (C:\\Users\\puhlmpau\\GitHub\\paupuhprojects\\playwright_typescript_cucumber\\dist\\test\\steps\\loginSteps.js:44:12)"
             }
           }
         ],
         "tags": [
           {
-            "name": "@login",
+            "name": "@registration",
             "line": 3
           }
         ],

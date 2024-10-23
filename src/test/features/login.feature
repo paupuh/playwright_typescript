@@ -1,11 +1,12 @@
 Feature: User Authentication tests
 
-  @login
+  @registration
   Scenario:
     Given User opens the login page
     When User clicks on the "Login" button
     Then User should be redirected to the login page
-    Given User clicks on the "Register" button
+    Given User goes to the registration page
+    Given User fills in "First name" field with correct details
     
 
 
