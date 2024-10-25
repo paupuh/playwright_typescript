@@ -51,11 +51,11 @@ export class LoginPage {
     await this.page.waitForURL(this.registerPath);
   }
 
-  public async clickNameField(): Promise<void> {
-    await this.page.locator(this.nameField).focus();
-    await this.page.locator(this.nameField).click();
-  }
-  
+  public async clickField(locator: string): Promise<void> {
+    await this.page.locator(locator).focus();
+    await this.page.locator(locator).click();
+}
+
   public async inputValue(
     fieldLocator: string,
     fieldValue: string

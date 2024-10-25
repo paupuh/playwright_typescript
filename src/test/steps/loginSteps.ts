@@ -31,7 +31,7 @@ Given("User goes to the registration page", async function () {
   await loginPage.clickRegisterBtn();
 });
 Given("User fills in field with correct details", async function () {
-  await loginPage.clickNameField();
+  await loginPage.clickField(loginPage.nameField);
 });
 
 After(async function () {
