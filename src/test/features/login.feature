@@ -6,7 +6,7 @@ Feature: User Authentication tests
     When User clicks on the "Login" button
     Then User should be redirected to the login page
     Given User goes to the registration page
-    Given User fills in "First name" field with correct details
+    Given User fills in field with correct details
     
 
 

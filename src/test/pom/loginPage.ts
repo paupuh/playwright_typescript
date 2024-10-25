@@ -1,10 +1,11 @@
-import { Page, } from "playwright";
+import { Page } from "playwright";
+import { expect } from "@playwright/test";
 
 export class LoginPage {
   page: Page;
   homePath: string;
   registerPath: string;
- 
+
   loginBtn: string;
   loginPath: string;
   registerBtn: string;
@@ -15,12 +16,13 @@ export class LoginPage {
   constructor(page: Page) {
     this.page = page;
     this.homePath = "https://bookcart.azurewebsites.net"; // URL do strony głównej
-    this.registerPath = "https://bookcart.azurewebsites.net/register"
+    this.registerPath = "https://bookcart.azurewebsites.net/register";
     this.loginPath = "https://bookcart.azurewebsites.net/login";
 
     this.loginBtn = "button.mat-mdc-tooltip-trigger span.mdc-button__label";
-    this.registerBtn = "button.mdc-button span.mdc-button__label";
-    this.nameField = "ng-tns-c1534922977-1mat-mdc-form-field-flex "
+    this.registerBtn = 'span.mdc-button__label:has-text("Register")';
+    this.nameField = 'input[placeholder="First name"]';
+
     // this.lastNameField
     // this.userNameField
     // this.passwordField
@@ -49,10 +51,17 @@ export class LoginPage {
     await this.page.waitForURL(this.registerPath);
   }
 
-  public async inputValue(fieldLocator: string, fieldValue: string): Promise<void> {
-    await loginPage.inputValue(loginPage.nameField, loginPage.firstName);
-    const inputValue = await page.locator(loginPage.nameField).inputValue();
-    expect(inputValue).toBe(loginPage.firstName);
+  public async clickNameField(): Promise<void> {
+    await this.page.locator(this.nameField).focus();
+    await this.page.locator(this.nameField).click();
   }
   
+  public async inputValue(
+    fieldLocator: string,
+    fieldValue: string
+  ): Promise<void> {
+    await this.inputValue(this.nameField, this.firstName);
+    const inputValue = await this.page.locator(this.nameField).inputValue();
+    expect(inputValue).toBe(this.firstName);
+  }
 }

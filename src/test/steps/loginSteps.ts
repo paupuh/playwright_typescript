@@ -28,11 +28,10 @@ Then("User should be redirected to the login page", async function () {
 });
 
 Given("User goes to the registration page", async function () {
-  await loginPage.clickLoginBtn();
+  await loginPage.clickRegisterBtn();
 });
-
-Given("User fills in {string} field with correct details", async function (fieldLocator: string, fieldValue: string) {
-  await loginPage.inputValue(loginPage.nameField, loginPage.firstName);
+Given("User fills in field with correct details", async function () {
+  await loginPage.clickNameField();
 });
 
 After(async function () {
