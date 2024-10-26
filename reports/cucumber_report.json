@@ -15,24 +15,24 @@
             "line": 5,
             "name": "User opens the login page",
             "match": {
-              "location": "dist/test/steps/loginSteps.js:20"
+              "location": "dist\\test\\steps\\loginSteps.js:20"
             },
             "result": {
               "status": "passed",
-              "duration": 2948207166
+              "duration": 5081182699
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 6,
-            "name": "User clicks on the \"Login\" button",
+            "name": "User clicks on the Login button",
             "match": {
-              "location": "dist/test/steps/loginSteps.js:28"
+              "location": "dist\\test\\steps\\loginSteps.js:28"
             },
             "result": {
               "status": "passed",
-              "duration": 112619541
+              "duration": 98855000
             }
           },
           {
@@ -41,37 +41,174 @@
             "line": 7,
             "name": "User should be redirected to the login page",
             "match": {
-              "location": "dist/test/steps/loginSteps.js:33"
+              "location": "dist\\test\\steps\\loginSteps.js:33"
             },
             "result": {
               "status": "passed",
-              "duration": 310894375
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 8,
-            "name": "User goes to the registration page",
-            "match": {
-              "location": "dist/test/steps/loginSteps.js:38"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 224823417
+              "duration": 326140200
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
             "line": 9,
-            "name": "User fills in field with correct details",
+            "name": "User goes to the registration page",
             "match": {
-              "location": "dist/test/steps/loginSteps.js:43"
+              "location": "dist\\test\\steps\\loginSteps.js:38"
             },
             "result": {
               "status": "passed",
-              "duration": 39372832
+              "duration": 260683900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "User clicks the First name field",
+            "match": {
+              "location": "dist\\test\\steps\\loginSteps.js:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 108777900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "User fills in the First name field with correct values and values are visible",
+            "match": {
+              "location": "dist\\test\\steps\\loginSteps.js:48"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 32863099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "User clicks the Last name field",
+            "match": {
+              "location": "dist\\test\\steps\\loginSteps.js:53"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 64081799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "User fills in the Last name field with correct values and values are visible",
+            "match": {
+              "location": "dist\\test\\steps\\loginSteps.js:58"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 25705699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "User clicks the Password field",
+            "match": {
+              "location": "dist\\test\\steps\\loginSteps.js:73"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 53697199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "User fills in the Password field with correct values and values are visible",
+            "match": {
+              "location": "dist\\test\\steps\\loginSteps.js:78"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16686499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 19,
+            "name": "User clicks the Confirm Password field",
+            "match": {
+              "location": "dist\\test\\steps\\loginSteps.js:83"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 67568800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 20,
+            "name": "User fills in the Confirm Password field with correct values and values are visible",
+            "match": {
+              "location": "dist\\test\\steps\\loginSteps.js:88"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 17487600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 22,
+            "name": "User selects the Gender checkbox as a Male",
+            "match": {
+              "location": "dist\\test\\steps\\loginSteps.js:93"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 47593200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 23,
+            "name": "User's Gender selected and visible",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "User clicks the Register button",
+            "match": {
+              "location": "dist\\test\\steps\\loginSteps.js:98"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 26,
+            "name": "User redisrected to login page and registered successfully",
+            "result": {
+              "status": "undefined",
+              "duration": 0
             }
           },
           {
@@ -79,7 +216,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 79006207
+              "duration": 221143099
             }
           }
         ],
@@ -97,6 +234,6 @@
     "keyword": "Feature",
     "name": "User Authentication tests",
     "tags": [],
-    "uri": "src/test/features/login.feature"
+    "uri": "src\\test\\features\\login.feature"
   }
 ]

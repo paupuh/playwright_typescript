@@ -9,9 +9,19 @@ export class LoginPage {
   loginBtn: string;
   loginPath: string;
   registerBtn: string;
+  registerBtn2: string;
 
   nameField: string;
+  lastNameField: string;
+  userNameField: string;
+  passwordField: string;
+  confirmPasswordField: string;
+  checkboxMale: string;
+
   firstName: string;
+  lastName: string;
+  userName: string;
+  password: string;
 
   constructor(page: Page) {
     this.page = page;
@@ -21,17 +31,19 @@ export class LoginPage {
 
     this.loginBtn = "button.mat-mdc-tooltip-trigger span.mdc-button__label";
     this.registerBtn = 'span.mdc-button__label:has-text("Register")';
-    this.nameField = 'input[placeholder="First name"]';
+    this.registerBtn2 = '#mat-radio-2-input'
 
-    // this.lastNameField
-    // this.userNameField
-    // this.passwordField
-    // this.confirmPasswordField
+    this.nameField = 'input[placeholder="First name"]';
+    this.lastNameField = 'input.mat-mdc-input-element[placeholder="Last Name"]';
+    this.userNameField = 'input.mat-mdc-input-element[placeholder="User name"]';
+    this.passwordField = 'input.mat-mdc-input-element[placeholder="Password"]';
+    this.confirmPasswordField = 'input.mat-mdc-input-element[placeholder="Confirm Password"]';
+    this.checkboxMale = '#mat-radio-2-input'
 
     this.firstName = "Name";
-    // this.lastName = "Surname";
-    // this.userName = "Username";
-    // this.password = "Password";
+    this.lastName = "Surname";
+    this.userName = "Username";
+    this.password = "Password";
   }
 
   public async openHomePage(): Promise<void> {
@@ -54,14 +66,10 @@ export class LoginPage {
   public async clickField(locator: string): Promise<void> {
     await this.page.locator(locator).focus();
     await this.page.locator(locator).click();
-}
+  }
 
-  public async inputValue(
-    fieldLocator: string,
-    fieldValue: string
-  ): Promise<void> {
-    await this.inputValue(this.nameField, this.firstName);
-    const inputValue = await this.page.locator(this.nameField).inputValue();
-    expect(inputValue).toBe(this.firstName);
+  public async inputValue(locator: string, value: string): Promise<void> {
+    await this.page.locator(locator).fill(value);
+    expect(await this.page.locator(locator).inputValue()).toBe(value);
   }
 }
