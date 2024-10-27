@@ -1,56 +1,20 @@
 {
-  "name": "playwright_cucumber_typescript",
+  "name": "cucmber",
   "version": "1.0.0",
   "main": "index.js",
-  "watch": {
-    "format": {
-      "patterns": [
-        "src/**/*.ts",
-        "src/**/*.tsx",
-        "src/**/*.js",
-        "src/**/*.jsx"
-      ],
-      "extensions": "ts,tsx,js,jsx,json,css,scss,md"
-    }
-  },
   "scripts": {
-    "test": "tsc && cucumber-js --import dist/test/steps/*.js --import dist/test/pom/*.js",
-    "format": "prettier --write '**/*.{ts,tsx,js,jsx,json,css,scss,md}'",
-    "format:watch": "npm-watch format"
+    "test": "cucumber-js test"
   },
-  "keywords": [
-    "cucumber",
-    "cucumber - TS",
-    "playwright-cucumber"
-  ],
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
-  "devDependencies": {
+  "dependencies": {
     "@cucumber/cucumber": "^11.0.1",
-    "@playwright/test": "^1.48.0",
-    "@types/node": "^22.7.5",
-    "husky": "^9.1.6",
-    "lint-staged": "^15.2.10",
-    "npm-watch": "^0.13.0",
-    "prettier": "^3.3.3",
-    "test": "cucumber-js --import-module ts-node/register",
+    "@playwright/test": "^1.48.1",
+    "@types/node": "^22.7.8",
+    "playwright": "^1.48.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.3"
-  },
-  "dependencies": {
-    "@cucumber/pretty-formatter": "^1.0.1",
-    "playwright": "^1.48.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.ts": [
-      "prettier --write",
-      "git add"
-    ]
   }
 }

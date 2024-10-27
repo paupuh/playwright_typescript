@@ -1,8 +1,4 @@
 {
-  "cucumberautocomplete.steps": [
-    "src/test/steps/*.js" // Ścieżka do plików z krokami (może być inna w zależności od projektu)
-  ],
-  "cucumberautocomplete.syncfeatures": "src/test/features/*feature", // Ścieżka do plików .feature
-  "cucumberautocomplete.strictGherkinCompletion": true, // Włącza ścisłe dopasowanie Gherkin
-  "cucumberautocomplete.smartSnippets": true // Włącza sugestie do autouzupełniania
+  "cucumber.features": "scr/test/features/*.feature",
+  "cucumber.glue": "scr/test/steps/*.ts"
 }

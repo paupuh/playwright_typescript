@@ -15,11 +15,11 @@
             "line": 5,
             "name": "User opens the login page",
             "match": {
-              "location": "dist\\test\\steps\\loginSteps.js:20"
+              "location": "src/tests/steps/loginSteps.ts:12"
             },
             "result": {
               "status": "passed",
-              "duration": 5081182699
+              "duration": 3237862790
             }
           },
           {
@@ -28,11 +28,11 @@
             "line": 6,
             "name": "User clicks on the Login button",
             "match": {
-              "location": "dist\\test\\steps\\loginSteps.js:28"
+              "location": "src/tests/steps/loginSteps.ts:19"
             },
             "result": {
               "status": "passed",
-              "duration": 98855000
+              "duration": 101212457
             }
           },
           {
@@ -41,11 +41,11 @@
             "line": 7,
             "name": "User should be redirected to the login page",
             "match": {
-              "location": "dist\\test\\steps\\loginSteps.js:33"
+              "location": "src/tests/steps/loginSteps.ts:23"
             },
             "result": {
               "status": "passed",
-              "duration": 326140200
+              "duration": 381919917
             }
           },
           {
@@ -54,11 +54,11 @@
             "line": 9,
             "name": "User goes to the registration page",
             "match": {
-              "location": "dist\\test\\steps\\loginSteps.js:38"
+              "location": "src/tests/steps/loginSteps.ts:27"
             },
             "result": {
               "status": "passed",
-              "duration": 260683900
+              "duration": 283978833
             }
           },
           {
@@ -67,11 +67,11 @@
             "line": 10,
             "name": "User clicks the First name field",
             "match": {
-              "location": "dist\\test\\steps\\loginSteps.js:43"
+              "location": "src/tests/steps/loginSteps.ts:31"
             },
             "result": {
               "status": "passed",
-              "duration": 108777900
+              "duration": 88648334
             }
           },
           {
@@ -80,11 +80,11 @@
             "line": 11,
             "name": "User fills in the First name field with correct values and values are visible",
             "match": {
-              "location": "dist\\test\\steps\\loginSteps.js:48"
+              "location": "src/tests/steps/loginSteps.ts:35"
             },
             "result": {
               "status": "passed",
-              "duration": 32863099
+              "duration": 8896792
             }
           },
           {
@@ -93,11 +93,11 @@
             "line": 13,
             "name": "User clicks the Last name field",
             "match": {
-              "location": "dist\\test\\steps\\loginSteps.js:53"
+              "location": "src/tests/steps/loginSteps.ts:42"
             },
             "result": {
               "status": "passed",
-              "duration": 64081799
+              "duration": 57432499
             }
           },
           {
@@ -106,11 +106,11 @@
             "line": 14,
             "name": "User fills in the Last name field with correct values and values are visible",
             "match": {
-              "location": "dist\\test\\steps\\loginSteps.js:58"
+              "location": "src/tests/steps/loginSteps.ts:46"
             },
             "result": {
               "status": "passed",
-              "duration": 25705699
+              "duration": 6092874
             }
           },
           {
@@ -119,11 +119,11 @@
             "line": 16,
             "name": "User clicks the Password field",
             "match": {
-              "location": "dist\\test\\steps\\loginSteps.js:73"
+              "location": "src/tests/steps/loginSteps.ts:64"
             },
             "result": {
               "status": "passed",
-              "duration": 53697199
+              "duration": 58577792
             }
           },
           {
@@ -132,11 +132,11 @@
             "line": 17,
             "name": "User fills in the Password field with correct values and values are visible",
             "match": {
-              "location": "dist\\test\\steps\\loginSteps.js:78"
+              "location": "src/tests/steps/loginSteps.ts:68"
             },
             "result": {
               "status": "passed",
-              "duration": 16686499
+              "duration": 5870499
             }
           },
           {
@@ -145,11 +145,11 @@
             "line": 19,
             "name": "User clicks the Confirm Password field",
             "match": {
-              "location": "dist\\test\\steps\\loginSteps.js:83"
+              "location": "src/tests/steps/loginSteps.ts:75"
             },
             "result": {
               "status": "passed",
-              "duration": 67568800
+              "duration": 61774750
             }
           },
           {
@@ -158,11 +158,11 @@
             "line": 20,
             "name": "User fills in the Confirm Password field with correct values and values are visible",
             "match": {
-              "location": "dist\\test\\steps\\loginSteps.js:88"
+              "location": "src/tests/steps/loginSteps.ts:79"
             },
             "result": {
               "status": "passed",
-              "duration": 17487600
+              "duration": 5512707
             }
           },
           {
@@ -171,11 +171,11 @@
             "line": 22,
             "name": "User selects the Gender checkbox as a Male",
             "match": {
-              "location": "dist\\test\\steps\\loginSteps.js:93"
+              "location": "src/tests/steps/loginSteps.ts:84"
             },
             "result": {
               "status": "passed",
-              "duration": 47593200
+              "duration": 62123583
             }
           },
           {
@@ -194,7 +194,7 @@
             "line": 25,
             "name": "User clicks the Register button",
             "match": {
-              "location": "dist\\test\\steps\\loginSteps.js:98"
+              "location": "src/tests/steps/loginSteps.ts:88"
             },
             "result": {
               "status": "skipped",
@@ -216,7 +216,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 221143099
+              "duration": 66559833
             }
           }
         ],
@@ -234,6 +234,6 @@
     "keyword": "Feature",
     "name": "User Authentication tests",
     "tags": [],
-    "uri": "src\\test\\features\\login.feature"
+    "uri": "src/tests/features/login.feature"
   }
 ]
