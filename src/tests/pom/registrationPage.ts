@@ -1,7 +1,7 @@
 import { Page } from "playwright";
 import { expect } from "@playwright/test";
 
-export class LoginPage {
+export class RegisterPage {
   page: Page;
   homePath: string;
   registerPath: string;
