@@ -22,6 +22,7 @@ export class RegisterPage {
   lastName: string;
   userName: string;
   password: string;
+  userloggedin: string;
 
   constructor(page: Page) {
     this.page = page;
@@ -31,19 +32,21 @@ export class RegisterPage {
 
     this.loginBtn = "button.mat-mdc-tooltip-trigger span.mdc-button__label";
     this.registerBtn = 'span.mdc-button__label:has-text("Register")';
-    this.registerBtn2 = '#mat-radio-2-input'
+    this.registerBtn2 = "#mat-radio-2-input";
 
     this.nameField = 'input[placeholder="First name"]';
     this.lastNameField = 'input.mat-mdc-input-element[placeholder="Last Name"]';
     this.userNameField = 'input.mat-mdc-input-element[placeholder="User name"]';
     this.passwordField = 'input.mat-mdc-input-element[placeholder="Password"]';
-    this.confirmPasswordField = 'input.mat-mdc-input-element[placeholder="Confirm Password"]';
-    this.checkboxMale = '#mat-radio-2-input'
+    this.confirmPasswordField =
+      'input.mat-mdc-input-element[placeholder="Confirm Password"]';
+    this.checkboxMale = "#mat-radio-2-input";
 
     this.firstName = "Name";
     this.lastName = "Surname";
     this.userName = "Username";
-    this.password = "Password";
+    this.password = "Password123!";
+    this.userloggedin = "//span[text()=' PAU']"
   }
 
   public async openHomePage(): Promise<void> {

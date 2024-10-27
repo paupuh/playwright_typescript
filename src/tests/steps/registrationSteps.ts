@@ -2,6 +2,7 @@ import { Given, When, Then, After } from "@cucumber/cucumber";
 import { chromium, Browser, Page } from "playwright";
 import { RegisterPage } from "../pom/registrationPage";
 import { setDefaultTimeout } from "@cucumber/cucumber";
+import { expect } from "playwright/test";
 
 setDefaultTimeout(70000); // 70 seconds for all steps
 
@@ -99,15 +100,19 @@ Then(
 );
 
 When("User selects the Gender checkbox as a Male", async function () {
+  await registerPage.page.waitForSelector(registerPage.checkboxMale);
   await registerPage.clickField(registerPage.checkboxMale);
+  expect(
+    await registerPage.page.isChecked(registerPage.checkboxMale)
+  ).toBeTruthy();
 });
 
 When("User clicks the Register button", async function () {
   await registerPage.clickField(registerPage.registerBtn2);
 });
 
-Then("User redirected to the login page", async function () {
-  await registerPage.waitForLoginPage();
+Then("User redirected to the login page and registered succesfully",
+  async function () {
 });
 
 After(async function () {

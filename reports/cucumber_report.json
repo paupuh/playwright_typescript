@@ -15,11 +15,11 @@
             "line": 5,
             "name": "User opens the login page",
             "match": {
-              "location": "src/tests/steps/registrationSteps.ts:12"
+              "location": "src/tests/steps/registrationSteps.ts:13"
             },
             "result": {
               "status": "passed",
-              "duration": 7050713166
+              "duration": 3044793958
             }
           },
           {
@@ -28,11 +28,11 @@
             "line": 6,
             "name": "User clicks on the Login button",
             "match": {
-              "location": "src/tests/steps/registrationSteps.ts:19"
+              "location": "src/tests/steps/registrationSteps.ts:20"
             },
             "result": {
               "status": "passed",
-              "duration": 53488999
+              "duration": 116627875
             }
           },
           {
@@ -41,11 +41,11 @@
             "line": 7,
             "name": "User should be redirected to the login page",
             "match": {
-              "location": "src/tests/steps/registrationSteps.ts:23"
+              "location": "src/tests/steps/registrationSteps.ts:24"
             },
             "result": {
               "status": "passed",
-              "duration": 325325208
+              "duration": 310141666
             }
           },
           {
@@ -54,11 +54,11 @@
             "line": 9,
             "name": "User goes to the registration page",
             "match": {
-              "location": "src/tests/steps/registrationSteps.ts:27"
+              "location": "src/tests/steps/registrationSteps.ts:28"
             },
             "result": {
               "status": "passed",
-              "duration": 210297125
+              "duration": 220706125
             }
           },
           {
@@ -67,11 +67,11 @@
             "line": 10,
             "name": "User clicks the First name field",
             "match": {
-              "location": "src/tests/steps/registrationSteps.ts:31"
+              "location": "src/tests/steps/registrationSteps.ts:32"
             },
             "result": {
               "status": "passed",
-              "duration": 43139375
+              "duration": 41241082
             }
           },
           {
@@ -80,11 +80,11 @@
             "line": 11,
             "name": "User fills in the First name field with correct values and values are visible",
             "match": {
-              "location": "src/tests/steps/registrationSteps.ts:35"
+              "location": "src/tests/steps/registrationSteps.ts:36"
             },
             "result": {
               "status": "passed",
-              "duration": 10490417
+              "duration": 8533959
             }
           },
           {
@@ -93,11 +93,11 @@
             "line": 13,
             "name": "User clicks the Last name field",
             "match": {
-              "location": "src/tests/steps/registrationSteps.ts:45"
+              "location": "src/tests/steps/registrationSteps.ts:46"
             },
             "result": {
               "status": "passed",
-              "duration": 22158666
+              "duration": 24162084
             }
           },
           {
@@ -106,11 +106,11 @@
             "line": 14,
             "name": "User fills in the Last name field with correct values and values are visible",
             "match": {
-              "location": "src/tests/steps/registrationSteps.ts:49"
+              "location": "src/tests/steps/registrationSteps.ts:50"
             },
             "result": {
               "status": "passed",
-              "duration": 12807375
+              "duration": 6841250
             }
           },
           {
@@ -119,11 +119,11 @@
             "line": 16,
             "name": "User clicks the Password field",
             "match": {
-              "location": "src/tests/steps/registrationSteps.ts:73"
+              "location": "src/tests/steps/registrationSteps.ts:74"
             },
             "result": {
               "status": "passed",
-              "duration": 28623833
+              "duration": 26262875
             }
           },
           {
@@ -132,11 +132,11 @@
             "line": 17,
             "name": "User fills in the Password field with correct values and values are visible",
             "match": {
-              "location": "src/tests/steps/registrationSteps.ts:77"
+              "location": "src/tests/steps/registrationSteps.ts:78"
             },
             "result": {
               "status": "passed",
-              "duration": 7548875
+              "duration": 6171540
             }
           },
           {
@@ -145,11 +145,11 @@
             "line": 19,
             "name": "User clicks the Confirm Password field",
             "match": {
-              "location": "src/tests/steps/registrationSteps.ts:87"
+              "location": "src/tests/steps/registrationSteps.ts:88"
             },
             "result": {
               "status": "passed",
-              "duration": 25416250
+              "duration": 25727708
             }
           },
           {
@@ -158,11 +158,11 @@
             "line": 20,
             "name": "User fills in the Confirm Password field with correct values and values are visible",
             "match": {
-              "location": "src/tests/steps/registrationSteps.ts:91"
+              "location": "src/tests/steps/registrationSteps.ts:92"
             },
             "result": {
               "status": "passed",
-              "duration": 6417583
+              "duration": 6231499
             }
           },
           {
@@ -171,44 +171,24 @@
             "line": 22,
             "name": "User selects the Gender checkbox as a Male",
             "match": {
-              "location": "src/tests/steps/registrationSteps.ts:101"
+              "location": "src/tests/steps/registrationSteps.ts:102"
             },
             "result": {
               "status": "passed",
-              "duration": 28017749
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 23,
-            "name": "User's Gender selected and visible",
-            "result": {
-              "status": "undefined",
-              "duration": 0
+              "duration": 40301749
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 25,
+            "line": 24,
             "name": "User clicks the Register button",
             "match": {
-              "location": "src/tests/steps/registrationSteps.ts:105"
+              "location": "src/tests/steps/registrationSteps.ts:110"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 26,
-            "name": "User redirected to the login page and registered successfully",
-            "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "passed",
+              "duration": 20769583
             }
           },
           {
@@ -216,7 +196,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 73254917
+              "duration": 67887999
             }
           }
         ],

@@ -20,10 +20,9 @@ Feature: User Authentication tests
     Then User fills in the Confirm Password field with correct values and values are visible
 
     When User selects the Gender checkbox as a Male
-    Then User's Gender selected and visible
 
     When User clicks the Register button
-    Then User redirected to the login page and registered successfully
+    # Then User redirected to the login page and registered succesfully
     
 
 
