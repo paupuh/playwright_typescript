@@ -32,7 +32,7 @@ export class RegisterPage {
 
     this.loginBtn = "button.mat-mdc-tooltip-trigger span.mdc-button__label";
     this.registerBtn = 'span.mdc-button__label:has-text("Register")';
-    this.registerBtn2 = "#mat-radio-2-input";
+    this.registerBtn2 = "button[class='mdc-button mdc-button--raised mat-mdc-raised-button mat-primary mat-mdc-button-base'] span[class='mdc-button__label']";
 
     this.nameField = 'input[placeholder="First name"]';
     this.lastNameField = 'input.mat-mdc-input-element[placeholder="Last Name"]';
@@ -46,7 +46,7 @@ export class RegisterPage {
     this.lastName = "Surname";
     this.userName = "Username";
     this.password = "Password123!";
-    this.userloggedin = "//span[text()=' PAU']"
+    this.userloggedin = "//span[contains(@class, 'mdc-button__label')]//span[contains(text(), 'kupa')]";
   }
 
   public async openHomePage(): Promise<void> {
@@ -61,12 +61,18 @@ export class RegisterPage {
     await this.page.waitForURL(this.loginPath); // Oczekuje na URL po zalogowaniu
   }
 
+  public async waitForregisteredUsrPage(): Promise<void> {
+    await this.page.waitForURL(this.homePath); 
+    await this.page.waitForSelector(this.userloggedin);
+  }
+  
+
   public async clickRegisterBtn(): Promise<void> {
     await this.page.locator(this.registerBtn).click();
     await this.page.waitForURL(this.registerPath);
   }
 
-  public async clickField(locator: string): Promise<void> {
+  public async clickElement(locator: string): Promise<void> {
     await this.page.locator(locator).focus();
     await this.page.locator(locator).click();
   }

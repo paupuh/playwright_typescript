@@ -30,7 +30,7 @@ Given("User goes to the registration page", async function () {
 });
 
 When("User clicks the First name field", async function () {
-  await registerPage.clickField(registerPage.nameField);
+  await registerPage.clickElement(registerPage.nameField);
 });
 
 Then(
@@ -44,7 +44,7 @@ Then(
 );
 
 When("User clicks the Last name field", async function () {
-  await registerPage.clickField(registerPage.lastNameField);
+  await registerPage.clickElement(registerPage.lastNameField);
 });
 
 Then(
@@ -58,7 +58,7 @@ Then(
 );
 
 When("User clicks the Username field", async function () {
-  await registerPage.clickField(registerPage.userNameField);
+  await registerPage.clickElement(registerPage.userNameField);
 });
 
 Then(
@@ -72,7 +72,7 @@ Then(
 );
 
 When("User clicks the Password field", async function () {
-  await registerPage.clickField(registerPage.passwordField);
+  await registerPage.clickElement(registerPage.passwordField);
 });
 
 Then(
@@ -86,7 +86,7 @@ Then(
 );
 
 When("User clicks the Confirm Password field", async function () {
-  await registerPage.clickField(registerPage.confirmPasswordField);
+  await registerPage.clickElement(registerPage.confirmPasswordField);
 });
 
 Then(
@@ -101,19 +101,20 @@ Then(
 
 When("User selects the Gender checkbox as a Male", async function () {
   await registerPage.page.waitForSelector(registerPage.checkboxMale);
-  await registerPage.clickField(registerPage.checkboxMale);
+  await registerPage.clickElement(registerPage.checkboxMale);
   expect(
     await registerPage.page.isChecked(registerPage.checkboxMale)
   ).toBeTruthy();
 });
 
 When("User clicks the Register button", async function () {
-  await registerPage.clickField(registerPage.registerBtn2);
+  await registerPage.clickElement(registerPage.registerBtn2);
 });
 
-Then("User redirected to the login page and registered succesfully",
-  async function () {
-});
+Then("User redirected to the login page and registered succesfully", async function () {
+    await registerPage.waitForregisteredUsrPage();
+  }
+);
 
 After(async function () {
   if (browser) {
