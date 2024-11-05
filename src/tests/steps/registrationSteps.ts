@@ -109,6 +109,8 @@ When("User selects the Gender checkbox as a Male", async function () {
 
 When("User clicks the Register button", async function () {
   await registerPage.clickElement(registerPage.registerBtn2);
+  debugger; // Zatrzymuje wykonywanie kodu
+  await registerPage.waitForregisteredUsrPage();
 });
 
 Then("User redirected to the login page and registered succesfully", async function () {

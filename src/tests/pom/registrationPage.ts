@@ -62,9 +62,9 @@ export class RegisterPage {
   }
 
   public async waitForregisteredUsrPage(): Promise<void> {
-    await this.page.waitForURL(this.homePath); 
-    await this.page.waitForSelector(this.userloggedin);
-  }
+    await this.page.waitForURL(this.homePath, { timeout: 15000 });
+    await this.page.waitForSelector(this.userloggedin, { timeout: 15000 });
+}
   
 
   public async clickRegisterBtn(): Promise<void> {

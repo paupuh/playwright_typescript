@@ -19,7 +19,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3777175999
+              "duration": 5055220582
             }
           },
           {
@@ -32,7 +32,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 131626709
+              "duration": 67296167
             }
           },
           {
@@ -45,7 +45,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 454232415
+              "duration": 338363458
             }
           },
           {
@@ -58,7 +58,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 356368750
+              "duration": 213080291
             }
           },
           {
@@ -71,7 +71,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 44674208
+              "duration": 40778832
             }
           },
           {
@@ -84,7 +84,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 9340624
+              "duration": 8598540
             }
           },
           {
@@ -97,7 +97,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 22312624
+              "duration": 23336000
             }
           },
           {
@@ -110,7 +110,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 6445832
+              "duration": 5997792
             }
           },
           {
@@ -123,7 +123,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 26886333
+              "duration": 26961624
             }
           },
           {
@@ -136,7 +136,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 5540750
+              "duration": 8240667
             }
           },
           {
@@ -149,7 +149,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 27409042
+              "duration": 24700874
             }
           },
           {
@@ -162,7 +162,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 5763500
+              "duration": 5913540
             }
           },
           {
@@ -175,7 +175,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 40283207
+              "duration": 37832959
             }
           },
           {
@@ -187,8 +187,9 @@
               "location": "src/tests/steps/registrationSteps.ts:110"
             },
             "result": {
-              "status": "passed",
-              "duration": 23689457
+              "status": "failed",
+              "duration": 15026663292,
+              "error_message": "page.waitForURL: Timeout 15000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation to \"https://bookcart.azurewebsites.net\" until \"load\"\n============================================================\n    at RegisterPage.waitForregisteredUsrPage (/Users/paulinapuhlmann/GitHub/playwright_cucumber_typescript/src/tests/pom/registrationPage.ts:65:21)\n    at World.<anonymous> (/Users/paulinapuhlmann/GitHub/playwright_cucumber_typescript/src/tests/steps/registrationSteps.ts:112:22)"
             }
           },
           {
@@ -196,7 +197,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 78576207
+              "duration": 68013209
             }
           }
         ],
