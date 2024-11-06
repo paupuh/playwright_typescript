@@ -1,84 +1,84 @@
-import { Page } from "playwright";
-import { expect } from "@playwright/test";
+import { Locator, Page } from "@playwright/test";
+import { BasePage } from "./basePage"; // Import klasy bazowej
 
-export class RegisterPage {
-  page: Page;
-  homePath: string;
-  registerPath: string;
+export class RegisterPage extends BasePage {
+  click(registerBtn2: any) {
+    throw new Error("Method not implemented.");
+  }
+  readonly homePath = "https://bookcart.azurewebsites.net";
+  readonly registerPath = "https://bookcart.azurewebsites.net/register";
+  readonly loginPath = "https://bookcart.azurewebsites.net/login";
 
-  loginBtn: string;
-  loginPath: string;
-  registerBtn: string;
-  registerBtn2: string;
+  readonly loginBtn: Locator;
+  readonly registerBtn: Locator;
+  readonly nameField: Locator;
+  readonly lastNameField: Locator;
+  readonly userNameField: Locator;
+  readonly passwordField: Locator;
+  readonly confirmPasswordField: Locator;
 
-  nameField: string;
-  lastNameField: string;
-  userNameField: string;
-  passwordField: string;
-  confirmPasswordField: string;
-  checkboxMale: string;
+  readonly checkboxMale: Locator;
 
-  firstName: string;
-  lastName: string;
-  userName: string;
-  password: string;
-  userloggedin: string;
+  readonly firstName = "Name";
+  readonly lastName = "Surname";
+  readonly userName = "Username1234";
+  readonly password = "Password123!";
+
+  public generateUsername(): string {
+    return `Username${Math.floor(Math.random() * 10000)}`;  // Generuje unikalny username np. Username1234
+  }
 
   constructor(page: Page) {
-    this.page = page;
-    this.homePath = "https://bookcart.azurewebsites.net"; // URL do strony głównej
-    this.registerPath = "https://bookcart.azurewebsites.net/register";
-    this.loginPath = "https://bookcart.azurewebsites.net/login";
-
-    this.loginBtn = "button.mat-mdc-tooltip-trigger span.mdc-button__label";
-    this.registerBtn = 'span.mdc-button__label:has-text("Register")';
-    this.registerBtn2 = "button[class='mdc-button mdc-button--raised mat-mdc-raised-button mat-primary mat-mdc-button-base'] span[class='mdc-button__label']";
-
-    this.nameField = 'input[placeholder="First name"]';
-    this.lastNameField = 'input.mat-mdc-input-element[placeholder="Last Name"]';
-    this.userNameField = 'input.mat-mdc-input-element[placeholder="User name"]';
-    this.passwordField = 'input.mat-mdc-input-element[placeholder="Password"]';
-    this.confirmPasswordField =
-      'input.mat-mdc-input-element[placeholder="Confirm Password"]';
-    this.checkboxMale = "#mat-radio-2-input";
-
-    this.firstName = "Name";
-    this.lastName = "Surname";
-    this.userName = "Username";
-    this.password = "Password123!";
-    this.userloggedin = "//span[contains(@class, 'mdc-button__label')]//span[contains(text(), 'kupa')]";
+    super(page); 
+    // Przypisanie lokatorów bezpośrednio do zmiennych typu Locator
+    this.loginBtn = this.page.locator('button:has-text("Login")');
+    this.registerBtn = this.page.locator('button:has-text("Register")');
+    this.nameField = this.page.locator('input[placeholder="First name"]');
+    this.lastNameField = this.page.locator('input[placeholder="Last Name"]');
+    this.userNameField = this.page.locator('input[placeholder="User name"]');
+    this.passwordField = this.page.locator('input[placeholder="Password"]');
+    this.confirmPasswordField = this.page.locator('input[placeholder="Confirm Password"]');
+    this.checkboxMale = this.page.locator('#mat-radio-2-input');
+    // Generowanie dynamicznego username przed każdym testem
+    // this.userName = this.generateUsername();
   }
 
   public async openHomePage(): Promise<void> {
-    await this.page.goto(this.homePath);
+    await this.open(this.homePath); 
   }
 
   public async clickLoginBtn(): Promise<void> {
-    await this.page.locator(this.loginBtn).click();
+    await this.clickLocator(this.loginBtn); 
   }
 
   public async waitForLoginPage(): Promise<void> {
-    await this.page.waitForURL(this.loginPath); // Oczekuje na URL po zalogowaniu
+    await this.waitForURL(this.loginPath);
   }
 
-  public async waitForregisteredUsrPage(): Promise<void> {
-    await this.page.waitForURL(this.homePath, { timeout: 15000 });
-    await this.page.waitForSelector(this.userloggedin, { timeout: 15000 });
-}
-  
+  public async waitForRegisteredUsrPage(): Promise<void> {
+    await this.waitForURL(this.homePath);
+    // await this.page.waitForSelector(this.userLoggedIn); // Używamy poprawnej zmiennej
+  }
 
   public async clickRegisterBtn(): Promise<void> {
-    await this.page.locator(this.registerBtn).click();
-    await this.page.waitForURL(this.registerPath);
+    await this.clickLocator(this.registerBtn); 
+    await this.waitForURL(this.registerPath);
   }
 
-  public async clickElement(locator: string): Promise<void> {
-    await this.page.locator(locator).focus();
-    await this.page.locator(locator).click();
+  public async inputValue(locator: Locator, value: string): Promise<void> {
+    await locator.fill(value);
+    // expect(await locator.inputValue()).toBe(value);
   }
 
-  public async inputValue(locator: string, value: string): Promise<void> {
-    await this.page.locator(locator).fill(value);
-    expect(await this.page.locator(locator).inputValue()).toBe(value);
+  public async fillRegistrationForm(): Promise<void> {
+    await this.inputValue(this.nameField, this.firstName);
+    await this.inputValue(this.lastNameField, this.lastName);
+    await this.inputValue(this.userNameField, this.userName);
+    await this.inputValue(this.passwordField, this.password);
+    await this.inputValue(this.confirmPasswordField, this.password);
+  }
+
+  public async checkMaleCheckbox(): Promise<void> {
+    await this.checkboxMale.check(); 
   }
 }

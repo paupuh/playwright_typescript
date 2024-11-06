@@ -19,7 +19,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 5055220582
+              "duration": 3943587499
             }
           },
           {
@@ -32,7 +32,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 67296167
+              "duration": 1376347125
             }
           },
           {
@@ -45,7 +45,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 338363458
+              "duration": 377315542
             }
           },
           {
@@ -58,7 +58,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 213080291
+              "duration": 296193083
             }
           },
           {
@@ -71,7 +71,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 40778832
+              "duration": 42973208
             }
           },
           {
@@ -84,7 +84,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 8598540
+              "duration": 9135624
             }
           },
           {
@@ -97,7 +97,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 23336000
+              "duration": 24066624
             }
           },
           {
@@ -110,7 +110,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 5997792
+              "duration": 7365959
             }
           },
           {
@@ -123,7 +123,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 26961624
+              "duration": 26446375
             }
           },
           {
@@ -136,7 +136,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 8240667
+              "duration": 6686708
             }
           },
           {
@@ -149,7 +149,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 24700874
+              "duration": 24208042
             }
           },
           {
@@ -162,7 +162,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 5913540
+              "duration": 6140875
             }
           },
           {
@@ -175,7 +175,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 37832959
+              "duration": 38063374
             }
           },
           {
@@ -188,8 +188,8 @@
             },
             "result": {
               "status": "failed",
-              "duration": 15026663292,
-              "error_message": "page.waitForURL: Timeout 15000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation to \"https://bookcart.azurewebsites.net\" until \"load\"\n============================================================\n    at RegisterPage.waitForregisteredUsrPage (/Users/paulinapuhlmann/GitHub/playwright_cucumber_typescript/src/tests/pom/registrationPage.ts:65:21)\n    at World.<anonymous> (/Users/paulinapuhlmann/GitHub/playwright_cucumber_typescript/src/tests/steps/registrationSteps.ts:112:22)"
+              "duration": 15030724041,
+              "error_message": "page.waitForURL: Timeout 15000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation to \"https://bookcart.azurewebsites.net\" until \"load\"\n============================================================\n    at RegisterPage.waitForregisteredUsrPage (/Users/paulinapuhlmann/GitHub/playwright_cucumber_typescript/src/tests/pom/registrationPage.ts:65:21)\n    at World.<anonymous> (/Users/paulinapuhlmann/GitHub/playwright_cucumber_typescript/src/tests/steps/registrationSteps.ts:113:22)"
             }
           },
           {
@@ -197,7 +197,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 68013209
+              "duration": 95471499
             }
           }
         ],
