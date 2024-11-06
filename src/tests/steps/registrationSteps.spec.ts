@@ -1,8 +1,6 @@
 // registrationSteps.ts
 import { chromium, Browser, Page } from "playwright";
 import { test, expect } from "@playwright/test";
-import beforeAll from "@playwright/test";
-import afterAll from "@playwright/test";
 import { RegisterPage } from "../pom/registrationPage";
 
 let browser: Browser;
