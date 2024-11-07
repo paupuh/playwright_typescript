@@ -1,4 +1,3 @@
-// registrationSteps.ts
 import { chromium, Browser, Page } from "playwright";
 import { test, expect } from "@playwright/test";
 import { RegisterPage } from "../pom/registrationPage";
@@ -31,13 +30,13 @@ test("User selects the Gender checkbox as Male", async () => {
   await registerPage.checkMaleCheckbox();
 });
 
+//TODO 
 // test("User clicks the Register button and completes registration", async () => {
 //   await registerPage.click(registerPage.registerBtn2);
 // });
 
 test("User goes to the home page", async () => {
   await registerPage.openHomePage();
-  await page.pause();
 });
 
 test.afterAll(async () => {

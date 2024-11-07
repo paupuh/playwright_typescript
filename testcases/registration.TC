@@ -23,6 +23,5 @@ Feature: User Authentication tests
 
     When User clicks the Register button
     # Then User redirected to the login page and registered succesfully
-    
 
 
