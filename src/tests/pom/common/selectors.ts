@@ -28,18 +28,11 @@ const selectors = {
 
   shppage: {
     // Buttons
-    clickAddToCartButton: async (page: Page, index: number) => {
-      const button = page
-        .getByRole("button", { name: "Add to Cart" })
-        .nth(index);
-      await button.focus();
-      await button.click();
+    addToCartButton: (page: Page, index: number) =>
+      page.getByRole(`button` , {name: "Add to Cart"}).nth(index),
 
     // Input Fields
-
-    },
   },
-  common: {},
 };
 
 export { selectors };

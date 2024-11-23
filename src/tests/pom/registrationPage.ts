@@ -43,7 +43,7 @@ export class RegisterPage extends BasePage {
   public async fillRegistrationForm(): Promise<void> {
     await this.inputValue(selectors.rgstrpage.nameField, "Name");
     await this.inputValue(selectors.rgstrpage.lastNameField, "Surname");
-    await this.inputValue(selectors.rgstrpage.userNameField, "Username1234");
+    await this.inputValue(selectors.rgstrpage.userNameField, this.generateUsername()); 
     await this.inputValue(selectors.rgstrpage.passwordField, "Password123!");
     await this.inputValue(
       selectors.rgstrpage.confirmPasswordField,
@@ -54,4 +54,5 @@ export class RegisterPage extends BasePage {
   public async checkMaleCheckbox(): Promise<void> {
     await selectors.rgstrpage.maleCheckbox(this.page).check(); 
   }
+
 }

@@ -30,13 +30,10 @@ test("User selects the Gender checkbox as Male", async () => {
   await registerPage.checkMaleCheckbox();
 });
 
-//TODO 
-// test("User clicks the Register button and completes registration", async () => {
-//   await registerPage.click(registerPage.registerBtn2);
-// });
-
-test("User goes to the home page", async () => {
-  await registerPage.openHomePage();
+test("User clicks the Register button and completes registration", async () => {
+  await registerPage.page.waitForTimeout(5000);
+  await registerPage.clickRegisterBtn();
+  await registerPage.waitForLoginPage();
 });
 
 test.afterAll(async () => {
