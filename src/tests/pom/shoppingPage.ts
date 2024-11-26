@@ -14,9 +14,5 @@ export class ShoppingPage extends BasePage {
 
   public async isAddedToCart(): Promise<void> {
     const cartBtn = await selectors.shppage.cartBtn(this.page);
-    const value = await cartBtn.evaluate(
-      (el) => (el as HTMLInputElement).value
-    );
-    expect(value).toBe("1");
-  }
+    expect (await cartBtn.innerText()).toBe("1"); }
 }
