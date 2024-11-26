@@ -31,6 +31,7 @@ const selectors = {
     addToCartButton: (page: Page, index: number) =>
       page.getByRole(`button` , {name: "Add to Cart"}).nth(index),
 
+    cartBtn: (page: Page) => page.locator("#mat-badge-content-0"),
     // Input Fields
   },
 };
