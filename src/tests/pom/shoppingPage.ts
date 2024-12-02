@@ -2,6 +2,8 @@ import { Page } from "playwright";
 import { expect } from "@playwright/test";
 import { BasePage } from "./basePage";
 import { selectors } from "./common/selectors";
+import { URLs } from "../pom/common/urls";
+
 
 export class ShoppingPage extends BasePage {
   constructor(page: Page) {
@@ -14,5 +16,11 @@ export class ShoppingPage extends BasePage {
 
   public async isAddedToCart(): Promise<void> {
     const cartBtn = await selectors.shppage.cartBtn(this.page);
-    expect (await cartBtn.innerText()).toBe("1"); }
+    expect(await cartBtn.innerText()).toBe("1");
+  }
+
+  public async openShoppingCart(): Promise<void> {
+    await selectors.shppage.cartBtn(this.page).click();
+    await this.waitForURL(URLs.cartPath); 
+  }
 }

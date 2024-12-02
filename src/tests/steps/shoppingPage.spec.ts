@@ -3,6 +3,7 @@ import { test, expect } from "@playwright/test";
 import { RegisterPage } from "../pom/registrationPage";
 import { selectors } from "../pom/common/selectors";
 import { ShoppingPage } from "../pom/shoppingPage";
+import { URLs } from "../pom/common/urls";
 
 let browser: Browser;
 let page: Page;
@@ -18,6 +19,21 @@ test.beforeAll(async () => {
 });
 
 test("Not logged in user adds a book to the cart", async () => {
- await shoppingPage.clickAddToCartBtn(4);
- await shoppingPage.isAddedToCart();
+  await shoppingPage.clickAddToCartBtn(4);
+  await shoppingPage.isAddedToCart();
+});
+
+test("Not logged in user goes to shopping cart and adds a book", async () => {
+  await shoppingPage.openShoppingCart();
+  AWAIT 
+});
+
+// test("Logged in user adds a book to the cart", async () => {
+  
+// });
+
+test.afterAll(async () => {
+  if (browser) {
+    await browser.close();
+  }
 });
