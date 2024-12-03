@@ -1,0 +1,220 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "user-authentication-tests;",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "User opens the login page",
+            "match": {
+              "location": "src/tests/steps/registrationSteps.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3943587499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "User clicks on the Login button",
+            "match": {
+              "location": "src/tests/steps/registrationSteps.ts:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1376347125
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "User should be redirected to the login page",
+            "match": {
+              "location": "src/tests/steps/registrationSteps.ts:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 377315542
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "User goes to the registration page",
+            "match": {
+              "location": "src/tests/steps/registrationSteps.ts:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 296193083
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "User clicks the First name field",
+            "match": {
+              "location": "src/tests/steps/registrationSteps.ts:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 42973208
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "User fills in the First name field with correct values and values are visible",
+            "match": {
+              "location": "src/tests/steps/registrationSteps.ts:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9135624
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "User clicks the Last name field",
+            "match": {
+              "location": "src/tests/steps/registrationSteps.ts:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 24066624
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "User fills in the Last name field with correct values and values are visible",
+            "match": {
+              "location": "src/tests/steps/registrationSteps.ts:50"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7365959
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "User clicks the Password field",
+            "match": {
+              "location": "src/tests/steps/registrationSteps.ts:74"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 26446375
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "User fills in the Password field with correct values and values are visible",
+            "match": {
+              "location": "src/tests/steps/registrationSteps.ts:78"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6686708
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 19,
+            "name": "User clicks the Confirm Password field",
+            "match": {
+              "location": "src/tests/steps/registrationSteps.ts:88"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 24208042
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 20,
+            "name": "User fills in the Confirm Password field with correct values and values are visible",
+            "match": {
+              "location": "src/tests/steps/registrationSteps.ts:92"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6140875
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 22,
+            "name": "User selects the Gender checkbox as a Male",
+            "match": {
+              "location": "src/tests/steps/registrationSteps.ts:102"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 38063374
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 24,
+            "name": "User clicks the Register button",
+            "match": {
+              "location": "src/tests/steps/registrationSteps.ts:110"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 15030724041,
+              "error_message": "page.waitForURL: Timeout 15000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation to \"https://bookcart.azurewebsites.net\" until \"load\"\n============================================================\n    at RegisterPage.waitForregisteredUsrPage (/Users/paulinapuhlmann/GitHub/playwright_cucumber_typescript/src/tests/pom/registrationPage.ts:65:21)\n    at World.<anonymous> (/Users/paulinapuhlmann/GitHub/playwright_cucumber_typescript/src/tests/steps/registrationSteps.ts:113:22)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 95471499
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@registration",
+            "line": 3
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "user-authentication-tests",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "User Authentication tests",
+    "tags": [],
+    "uri": "src/tests/features/registration.feature"
+  }
+]
