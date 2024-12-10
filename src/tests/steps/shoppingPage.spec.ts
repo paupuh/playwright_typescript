@@ -24,8 +24,7 @@ test("Not logged in user adds a book to the cart", async () => {
 });
 
 test("Not logged in user goes to shopping cart and adds a book", async () => {
-  await shoppingPage.openShoppingCart();
-  AWAIT 
+  await shoppingPage.openShoppingCart(); 
 });
 
 // test("Logged in user adds a book to the cart", async () => {
