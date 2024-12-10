@@ -20,6 +20,7 @@ test.beforeAll(async () => {
 
 test("Not logged in user adds a book to the cart", async () => {
   await shoppingPage.clickAddToCartBtn(4);
+  await shoppingPage.page.waitForTimeout(5000);
   await shoppingPage.isAddedToCart();
 });
 

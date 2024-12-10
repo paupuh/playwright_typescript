@@ -12,6 +12,7 @@ export class ShoppingPage extends BasePage {
 
   public async clickAddToCartBtn(index: number): Promise<void> {
     await selectors.shppage.addToCartButton(this.page, index).click();
+  
   }
 
   public async isAddedToCart(): Promise<void> {
