@@ -11,7 +11,7 @@ let registerPage: RegisterPage;
 let shoppingPage: ShoppingPage;
 
 test.beforeAll(async () => {
-  browser = await chromium.launch({ headless: false });
+  browser = await chromium.launch({ headless: true });
   page = await browser.newPage();
   registerPage = new RegisterPage(page);
   shoppingPage = new ShoppingPage(page);

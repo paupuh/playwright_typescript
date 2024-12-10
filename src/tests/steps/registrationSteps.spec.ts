@@ -7,7 +7,7 @@ let page: Page;
 let registerPage: RegisterPage;
 
 test.beforeAll(async () => {
-  browser = await chromium.launch({ headless: false });
+  browser = await chromium.launch({ headless: true });
   page = await browser.newPage();
   registerPage = new RegisterPage(page);
   await registerPage.openHomePage();
